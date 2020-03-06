@@ -1,0 +1,108 @@
+using System;
+public class IlegalException : SystemException { }
+namespace ConsoleApp6
+{
+    public abstract class Graph
+    {
+        public abstract  int Area();
+        public abstract Boolean Legal();
+        public abstract Graph RandomCreate();
+    }
+    public class Rectangle:Graph
+    {
+        private int _long;
+        private int _short;
+        override public int Area()
+        {
+            return _long * _short;
+        }
+        override public Boolean Legal()
+        {
+            if (_long > 0&&_short>0)
+                return true;
+            else return false;
+        }
+        public override Graph RandomCreate()
+        {
+            Rectangle a = new Rectangle();
+            Random random = new Random();
+            a._long = random.Next();
+            a._short = random.Next();
+            return a;
+        }
+    }
+    public class Square:Graph
+    {
+        private int _long;
+        override public int Area()
+        {
+            return _long * _long;
+        }
+        override public Boolean Legal()
+        {
+            if (_long>0)
+                return true;
+            else return false;
+        }
+        public override Graph RandomCreate()
+        {
+            Square a = new Square();
+            Random random = new Random();
+            a._long = random.Next();
+            return a;
+        }
+    }
+    public class Triangle:Graph
+    {
+        private int _long;
+        private int _high;
+        override public int Area()
+        {
+            return _long * _high;
+        }
+        override public Boolean Legal()
+        {
+            if (_long > 0 && _high  >0)
+                return true;
+            else return false;
+        }
+        public override Graph RandomCreate()
+        {
+            Triangle a = new Triangle();
+            Random random = new Random();
+            a._long = random.Next();
+            a._high = random.Next();
+            return a;
+        }
+    }
+    class Factory
+    {
+         public static Graph Create(int i)
+        {
+            if (i == 0)
+                return new Rectangle().RandomCreate();
+            else if (i == 1)
+                return new Square().RandomCreate();
+            else if (i == 2)
+                return new Triangle().RandomCreate();
+            else return null;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Graph[] graphs = new Graph[10];
+            Random random = new Random();
+            int sum_area = 0;
+            for (int i=0;i<=9;i++)
+            {
+                graphs[i]=Factory.Create(random.Next(3));
+                if (graphs[i].Legal() == false)
+                    throw new IlegalException();
+                sum_area += graphs[i].Area();
+            }
+            Console.Write(sum_area);
+        }
+    }
+}
