@@ -1,0 +1,7 @@
+C:\Users\hp\Desktop\2-28-1\2-28-1\bin\Debug\2-28-1.exe.config
+C:\Users\hp\Desktop\2-28-1\2-28-1\bin\Debug\2-28-1.exe
+C:\Users\hp\Desktop\2-28-1\2-28-1\bin\Debug\2-28-1.pdb
+C:\Users\hp\Desktop\2-28-1\2-28-1\obj\Debug\2-28-1.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\2-28-1\2-28-1\obj\Debug\2-28-1.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\2-28-1\2-28-1\obj\Debug\2-28-1.exe
+C:\Users\hp\Desktop\2-28-1\2-28-1\obj\Debug\2-28-1.pdb
