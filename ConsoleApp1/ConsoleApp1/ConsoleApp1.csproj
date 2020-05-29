@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8132A188-04AE-4598-B1C1-18568E5E7441}</ProjectGuid>
+    <ProjectGuid>{DF2E36A9-D118-48A7-8952-509E888997F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_3_13_2</RootNamespace>
-    <AssemblyName>3-13-2</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleCrawler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
